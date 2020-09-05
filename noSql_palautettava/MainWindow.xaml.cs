@@ -27,6 +27,7 @@ namespace noSql_palautettava
             InitializeComponent();
         }
 
+        //-------------------------henkilö tulostus
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var client = new MongoClient("mongodb://localhost:27017");
@@ -37,14 +38,22 @@ namespace noSql_palautettava
 
             //var list = await collection.Find(new BsonDocument("Etunimi", "Timo")).ToListAsync();
             var list =await collection.Find(new BsonDocument()).ToListAsync();
-
+            tblock_results.Text = "";
             foreach (var document in list)
             {
                 //MessageBox.Show(document["Sukunimi"].ToString());
-                MessageBox.Show(document.ToString());
+                //MessageBox.Show(document.ToString());
+                tblock_results.Text = tblock_results.Text + document["Etunimi"].ToString() + "     " +
+                 document["Sukunimi"].ToString() + "     "  +
+                document["Osoite"].ToString() + "     " +
+                document["Postinumero"].ToString() + "     " +
+                document["Sähköposti"].ToString() + "     " +
+                document["JäsenyydenAlkuPvm"].ToString() + "     "   +"\r\n";
+
             }
         }
 
+        //-------------------------henkilö lisäys
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
@@ -61,10 +70,37 @@ namespace noSql_palautettava
                 { "Osoite",  txt_osoite.Text.ToString()  },
                 { "Postinumero",  txt_postinum.Text.ToString()  },
                 { "Sähköposti",  txt_sahkoposti.Text.ToString()  },
-                { "JäsenyydenAlkuPvm", 2020},
+                { "JäsenyydenAlkuPvm", datePicker_pvm.SelectedDate},
                
             };
             collection.InsertOneAsync(document);
+        }
+
+        //-------------------------henkilö haku
+        private async Task btn_id_ClickAsync(object sender, RoutedEventArgs e)
+        {
+
+
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("henkilorekisteri");
+            var collection = database.GetCollection<BsonDocument>("henkilot");
+
+            //await collection.InsertOneAsync(new BsonDocument("Name", "Jack"));
+
+            var list = await collection.Find(new BsonDocument("Etunimi", "Timo")).ToListAsync();
+            tblock_results.Text = "";
+            foreach (var document in list)
+            {
+                //MessageBox.Show(document["Sukunimi"].ToString());
+                //MessageBox.Show(document.ToString());
+                tblock_results.Text = tblock_results.Text + document["Etunimi"].ToString() + "     " +
+                 document["Sukunimi"].ToString() + "     " +
+                document["Osoite"].ToString() + "     " +
+                document["Postinumero"].ToString() + "     " +
+                document["Sähköposti"].ToString() + "     " +
+                document["JäsenyydenAlkuPvm"].ToString() + "     " + "\r\n";
+
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
             <Button Content="Tallenna henkilö" HorizontalAlignment="Left" Height="36" Margin="230,353,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click_1"/>
         </Border>
         <Button x:Name="btn_gethk" Content="Katso kaikki henkilöt" HorizontalAlignment="Left" Height="36" Margin="896,490,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="29" Margin="40,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256"/>
+        <TextBox x:Name="txt_id" HorizontalAlignment="Left" Height="29" Margin="40,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256"/>
         <TextBox x:Name="txt_sukumimi" HorizontalAlignment="Left" Height="33" Margin="57,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" BorderBrush="Black" BorderThickness="2"/>
         <Label x:Name="lbl_sukunimi" Content="Sukunimi" HorizontalAlignment="Left" Height="26" Margin="57,145,0,0" VerticalAlignment="Top" Width="95" BorderThickness="2,2,2,0"/>
         <TextBox x:Name="txt_etunimi" HorizontalAlignment="Left" Height="33" Margin="191,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" BorderBrush="Black" BorderThickness="2"/>
@@ -23,6 +23,8 @@
         <TextBox x:Name="txt_sahkoposti" HorizontalAlignment="Left" Height="36" Margin="57,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" BorderBrush="Black" BorderThickness="2"/>
         <Label x:Name="lbl_sukunimi_Copy3" Content="Sähköposti" HorizontalAlignment="Left" Height="28" Margin="57,304,0,0" VerticalAlignment="Top" Width="209" BorderThickness="2,2,2,0"/>
         <Label x:Name="lbl_sukunimi_Copy4" Content="Jäsenyys aklu PVM" HorizontalAlignment="Left" Height="28" Margin="57,387,0,0" VerticalAlignment="Top" Width="209" BorderThickness="2,2,2,0"/>
-        <DatePicker HorizontalAlignment="Left" Height="27" Margin="57,420,0,0" VerticalAlignment="Top" Width="169"/>
+        <DatePicker x:Name="datePicker_pvm" HorizontalAlignment="Left" Height="27" Margin="57,420,0,0" VerticalAlignment="Top" Width="169"/>
+        <TextBlock x:Name="tblock_results" HorizontalAlignment="Left" Height="412" Margin="438,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="624" Foreground="#FF111111" Background="#FFE7F5F3"/>
+        <Button x:Name="btn_id" Content="Find by id" HorizontalAlignment="Left" Height="28" Margin="224,80,0,0" VerticalAlignment="Top" Width="104" Click="btn_id_Click"/>
     </Grid>
 </Window>
