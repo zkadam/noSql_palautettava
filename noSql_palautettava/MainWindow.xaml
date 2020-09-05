@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="580.932" Width="1092.373">
     <Grid>
-
+        <Button x:Name="btn_gethk" Content="Katso kaikki henkilöt" HorizontalAlignment="Left" Height="36" Margin="769,472,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
     </Grid>
 </Window>
