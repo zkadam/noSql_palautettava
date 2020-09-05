@@ -30,17 +30,21 @@ namespace noSql_palautettava
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("test");
-            var collection = database.GetCollection<BsonDocument>("products");
+            var database = client.GetDatabase("henkilorekisteri");
+            var collection = database.GetCollection<BsonDocument>("henkilot");
 
             //await collection.InsertOneAsync(new BsonDocument("Name", "Jack"));
 
-            var list = await collection.Find(new BsonDocument("tuote", "kortti")).ToListAsync();
+            //var list = await collection.Find(new BsonDocument("Etunimi", "Timo")).ToListAsync();
+            var list = collection.Find(new BsonDocument()).ToList();
 
             foreach (var document in list)
             {
-                MessageBox.Show(document["lukumaara"].ToString());
+                //MessageBox.Show(document["Sukunimi"].ToString());
+                MessageBox.Show(document.ToString());
             }
         }
+
+   
     }
 }
