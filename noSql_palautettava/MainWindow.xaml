@@ -8,7 +8,7 @@
         Title="MainWindow" Height="580.932" Width="1092.373">
     <Grid Background="#FFBAE8F5">
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="400" Margin="10,126,0,0" VerticalAlignment="Top" Width="409">
-            <Button Content="Tallenna henkilö" HorizontalAlignment="Left" Height="36" Margin="230,353,0,0" VerticalAlignment="Top" Width="168"/>
+            <Button Content="Tallenna henkilö" HorizontalAlignment="Left" Height="36" Margin="230,353,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click_1"/>
         </Border>
         <Button x:Name="btn_gethk" Content="Katso kaikki henkilöt" HorizontalAlignment="Left" Height="36" Margin="896,490,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Height="29" Margin="40,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256"/>
