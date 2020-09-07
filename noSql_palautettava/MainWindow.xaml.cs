@@ -56,7 +56,7 @@ namespace noSql_palautettava
         }
 
         //-------------------------------------------------------------------------------------------henkilö lisäys
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
             try
@@ -100,8 +100,8 @@ namespace noSql_palautettava
                 tblock_results.Text = "";
                 foreach (var document in list)
                 {
-                    MessageBox.Show(document["Sukunimi"].ToString());
-                    //MessageBox.Show(document.ToString());
+
+                    txt_idresult.Text = document["_id"].ToString();
                     txt_etunimi.Text = document["Etunimi"].ToString();
                     txt_sukunimi.Text = document["Sukunimi"].ToString();
                     txt_osoite.Text = document["Osoite"].ToString();
@@ -123,6 +123,7 @@ namespace noSql_palautettava
 
                 
         }
+
 
 
 
