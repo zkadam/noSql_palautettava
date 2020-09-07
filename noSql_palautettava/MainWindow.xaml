@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:noSql_palautettava"
         mc:Ignorable="d"
-        Title="MainWindow" Height="580.932" Width="1092.373">
-    <Grid Background="#FFBAE8F5" Margin="0,0,-107,-116">
+        Title="MainWindow" Height="737.424" Width="1335.553">
+    <Grid Background="#FFBAE8F5" Margin="35,29,34,23">
         <Grid.RowDefinitions>
-            <RowDefinition Height="193*"/>
-            <RowDefinition Height="141*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btn_gethk" Content="Katso kaikki henkilöt" HorizontalAlignment="Left" Height="36" Margin="896,103.944,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click" Grid.Row="1"/>
-        <TextBox x:Name="txt_id" HorizontalAlignment="Left" Height="29" Margin="40,40,0,0" TextWrapping="Wrap" Text="Etsi henkilö id:llä" VerticalAlignment="Top" Width="256"/>
+        <Button x:Name="btn_gethk" Content="Katso kaikki henkilöt" HorizontalAlignment="Left" Height="36" Margin="896,490,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click"/>
+        <TextBox x:Name="txt_id" HorizontalAlignment="Left" Height="29" Margin="40,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256"/>
         <TextBox x:Name="txt_sukunimi" HorizontalAlignment="Left" Height="33" Margin="57,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" BorderBrush="Black" BorderThickness="2"/>
         <Label x:Name="lbl_sukunimi" Content="Sukunimi" HorizontalAlignment="Left" Height="26" Margin="57,173,0,0" VerticalAlignment="Top" Width="95" BorderThickness="2,2,2,0"/>
         <TextBox x:Name="txt_etunimi" HorizontalAlignment="Left" Height="33" Margin="191,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" BorderBrush="Black" BorderThickness="2"/>
@@ -21,15 +20,16 @@
         <Label x:Name="lbl_sukunimi_Copy1" Content="Osoite" HorizontalAlignment="Left" Height="26" Margin="57,275,0,0" VerticalAlignment="Top" Width="95" BorderThickness="2,2,2,0"/>
         <TextBox x:Name="txt_postinum" HorizontalAlignment="Left" Height="33" Margin="263,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" BorderBrush="Black" BorderThickness="2"/>
         <Label x:Name="lbl_sukunimi_Copy2" Content="Postinumero" HorizontalAlignment="Left" Height="26" Margin="263,275,0,0" VerticalAlignment="Top" Width="95" BorderThickness="2,2,2,0"/>
-        <TextBox x:Name="txt_sahkoposti" HorizontalAlignment="Left" Height="36" Margin="57,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" BorderBrush="Black" BorderThickness="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="txt_sahkoposti" HorizontalAlignment="Left" Height="36" Margin="57,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" BorderBrush="Black" BorderThickness="2"/>
         <Label x:Name="lbl_sukunimi_Copy3" Content="Sähköposti" HorizontalAlignment="Left" Height="28" Margin="57,339,0,0" VerticalAlignment="Top" Width="209" BorderThickness="2,2,2,0"/>
-        <Label x:Name="lbl_sukunimi_Copy4" Content="Jäsenyys aklu PVM" HorizontalAlignment="Left" Height="28" Margin="57,36,0,0" VerticalAlignment="Top" Width="209" BorderThickness="2,2,2,0" Grid.Row="1"/>
-        <DatePicker x:Name="datePicker_pvm" HorizontalAlignment="Left" Height="27" Margin="57,69,0,0" VerticalAlignment="Top" Width="169" Grid.Row="1"/>
-        <TextBlock x:Name="tblock_results" HorizontalAlignment="Left" Height="412" Margin="438,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="745" Foreground="#FF111111" Background="#FFE7F5F3" Grid.RowSpan="2"/>
-        <Button x:Name="Btn_id" Content="Find by id" HorizontalAlignment="Left" Height="28" Margin="224,80,0,0" VerticalAlignment="Top" Width="104" Click="Btn_id_Click"/>
+        <Label x:Name="lbl_sukunimi_Copy4" Content="Jäsenyys aklu PVM" HorizontalAlignment="Left" Height="28" Margin="57,422,0,0" VerticalAlignment="Top" Width="209" BorderThickness="2,2,2,0"/>
+        <DatePicker x:Name="datePicker_pvm" HorizontalAlignment="Left" Height="27" Margin="57,455,0,0" VerticalAlignment="Top" Width="169" FirstDayOfWeek="Monday" />
+        <TextBlock x:Name="tblock_results" HorizontalAlignment="Left" Height="412" Margin="438,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="745" Foreground="#FF111111" Background="#FFE7F5F3"/>
+        <Button x:Name="Btn_id" Content="Etsi henkilö id:llä" HorizontalAlignment="Left" Height="33" Margin="23,82,0,0" VerticalAlignment="Top" Width="138" Click="Btn_id_Click"/>
         <Label Content="Etsi henkilö id:llä" HorizontalAlignment="Left" Height="25" Margin="23,10,0,0" VerticalAlignment="Top" Width="243"/>
-        <Button x:Name="btn" Content="Button" HorizontalAlignment="Left" Height="42" Margin="191,133,0,0" VerticalAlignment="Top" Width="159" Grid.Row="1"/>
+        <Button x:Name="btn" Content="Tallenna henkilö" HorizontalAlignment="Left" Height="42" Margin="191,523,0,0" VerticalAlignment="Top" Width="159" Click="btn_Click"/>
         <TextBox x:Name="txt_idresult" HorizontalAlignment="Left" Height="22" Margin="23,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" IsEnabled="False"/>
         <Label Content="id" HorizontalAlignment="Left" Height="23" Margin="23,115,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.419,-0.802"/>
+        <Button x:Name="btn_uusi" Content="Luo uusi henkilö" HorizontalAlignment="Left" Height="33" Margin="191,82,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_1"/>
     </Grid>
 </Window>
