@@ -27,9 +27,10 @@
         <TextBlock x:Name="tblock_results" HorizontalAlignment="Left" Height="412" Margin="438,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="745" Foreground="#FF111111" Background="#FFE7F5F3"/>
         <Button x:Name="Btn_id" Content="Etsi henkilö id:llä" HorizontalAlignment="Left" Height="33" Margin="23,82,0,0" VerticalAlignment="Top" Width="138" Click="Btn_id_Click"/>
         <Label Content="Etsi henkilö id:llä" HorizontalAlignment="Left" Height="25" Margin="23,10,0,0" VerticalAlignment="Top" Width="243"/>
-        <Button x:Name="btn" Content="Tallenna henkilö" HorizontalAlignment="Left" Height="42" Margin="191,523,0,0" VerticalAlignment="Top" Width="159" Click="btn_Click"/>
+        <Button x:Name="btn" Content="Tallenna henkilö" HorizontalAlignment="Left" Height="42" Margin="241,523,0,0" VerticalAlignment="Top" Width="159" Click="btn_Click"/>
         <TextBox x:Name="txt_idresult" HorizontalAlignment="Left" Height="22" Margin="23,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" IsEnabled="False"/>
         <Label Content="id" HorizontalAlignment="Left" Height="23" Margin="23,115,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.419,-0.802"/>
         <Button x:Name="btn_uusi" Content="Luo uusi henkilö" HorizontalAlignment="Left" Height="33" Margin="191,82,0,0" VerticalAlignment="Top" Width="167" Click="Button_Click_1"/>
+        <Button Content="Poista henkilö" HorizontalAlignment="Left" Height="42" Margin="23,523,0,0" VerticalAlignment="Top" Width="146" Click="Button_Click_2"/>
     </Grid>
 </Window>

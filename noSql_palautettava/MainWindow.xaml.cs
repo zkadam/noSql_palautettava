@@ -164,7 +164,29 @@ namespace noSql_palautettava
             datePicker_pvm.SelectedDate = DateTime.Today;
 
         }
+        //--------------------------------------------------------------------------------------------henkilön poisto
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("henkilorekisteri");
+            var collection = database.GetCollection<BsonDocument>("henkilot");
+            try
+            {
+            var id = new ObjectId(txt_id.Text.ToString());
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+            collection.DeleteOne(filter);
+            Button_Click_1(sender, e);
+             MessageBox.Show("Henkilö poistettu!");
 
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Poistaminen ei onnistunut!");
+
+            }
+
+        }
     }
 }
